@@ -122,7 +122,7 @@ function Hero() {
             <canvas ref={canvasRef} id="canvas"></canvas>
             <img src={profileImg} alt="Profile" className="profile-image"/>
             <h1 className="neon turquoise">Hi, I'm Shaurya</h1>
-            <h2 className="title">A FullStack Web Developer</h2>
+            <h2 className="title">A FullStack Developer</h2>
 
         </section>
     );

@@ -1,0 +1,33 @@
+/* src/components/Footer.css */
+.footer {
+    color: #fff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximum width of content */
+    margin: 0 auto; /* Center the footer */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.social-links {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 10px 0 0; /* Top margin */
+    display: flex; /* Flex display for links */
+    justify-content: center; /* Center the links */
+}
+
+.social-links li {
+    margin: 0 10px; /* Margin between links */
+}
+
+.social-links a {
+    color: #fff; /* White links */
+    text-decoration: none; /* No underline */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

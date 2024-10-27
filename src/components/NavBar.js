@@ -7,13 +7,13 @@ function NavBar() {
     return (
         <nav className="navbar">
             <Link to="/experience">
-                <button className="nav-button">Experience</button>
+                <button className="connect-button">Experience</button>
             </Link>
             <Link to="/skills">
-                <button className="nav-button">Skills</button>
+                <button className="connect-button">Skills</button>
             </Link>
             <Link to="/projects">
-                <button className="nav-button">Projects</button>
+                <button className="connect-button">Projects</button>
             </Link>
         </nav>
     );

@@ -6,8 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-
-  background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  height: 100vh; /* Full screen height */
+  background-color: #000000; /* Black background */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, rgba(0, 9, 29, 1) 1px); /* Radial gradient */
+  background-size: 20px 20px; /* Size of the gradient pattern */
 }
 
 code {

@@ -1,17 +1,21 @@
 /* src/components/About.css */
 .about {
-    max-width: 600px;
     padding: 40px;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
+    justify-content: center;
 }
-
+.sec{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
 h3 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     color: #8e2de2;
 }
 
 .quote {
+    font-size:1.5em;
     font-style: italic;
 }
 
@@ -36,7 +40,9 @@ h3 {
     color: #ffffff;
     border-radius: 20px;
     cursor: pointer;
-    margin-left: 5rem;}
+    margin: 1rem;
+
+}
 
 .connect-button:hover {
     background-color: #333;
