@@ -1,0 +1,33 @@
+/* src/components/Header.css *//* src/components/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #000; /* Adjust as per your theme */
+    color: #fff;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #8e2de2;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 1.5em;
+    color: #ffffff;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #8e2de2; /* Changes color on hover */
+}
+
