@@ -1,52 +1,63 @@
-/* Projects.css */
-
+/* src/components/Projects.css */
 .projects {
-    text-align: center;
-    color: white;
     padding: 20px;
+    text-align: center;
 }
 
 .projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Set exactly 4 columns */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-card {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    text-align: left;
+    background-color: rgba(142, 45, 226, 0.22);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 .project-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 16rem;
+    height: 10rem;
+    border-radius: 8px;
+    margin-bottom: 12px;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin: 0;
+.project-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: white;
 }
 
-p {
+.project-card p {
     font-size: 1em;
-    color: #bbb;
+    color: #555;
 }
-
-.view-all-button {
+.github-button-container {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #333;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.view-all-button:hover {
-    background-color: #bbb;
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #555555;
 }
