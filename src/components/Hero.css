@@ -65,3 +65,198 @@ h1:hover {
             0 0 80px var(--color4),
             0 0 100px var(--color4);
 }
+
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+
+
+.person {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.container {
+    border-radius: 50%;
+    height: 312px;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.48);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 400px;
+}
+
+.container:after {
+    content: "";
+    height: 10px;
+    position: absolute;
+    top: 390px;
+    width: 100%;
+}
+
+.container:hover {
+    transform: scale(0.54);
+}
+
+.container-inner {
+
+    position: relative;
+    transform-origin: 50%;
+    top: -200px;
+}
+
+.circle {
+    background-color: #fee7d3;
+    border-radius: 50%; /* Keeps it circular initially */
+    cursor: pointer;
+    height: 500px; /* Increase height */
+    left: -50px; /* Adjust position if needed */
+    pointer-events: none;
+    position: absolute;
+    top: 80px; /* Adjust top position for alignment */
+    width: 500px; /* Increase width */
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+.img {
+    pointer-events: none;
+    position: relative;
+    transform: translateY(20px) scale(1.15);
+    transform-origin: 50% bottom;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .img {
+    transform: translateY(0) scale(1.6);
+}
+
+.img1 {
+    left: 0px;
+    top: 220px;
+    width: 340px;
+}
+
+
+.divider {
+    background-color: #ca6060;
+    height: 1px;
+    width: 160px;
+}
+
+.name {
+    color: #404245;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.title {
+    color: #6e6e6e;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+
+
+
+
+
+pre {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 1rem 0 0 1rem;
+    width: fit-content;
+    padding: 2rem;
+    background-color: #151718;
+    color: #e6cd69;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+code {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+}
+pre {
+}
+i,
+b,
+u,
+em,
+strong {
+    text-decoration: none;
+    font-weight: 400;
+    font-style: normal;
+    color: #55b5db;
+}
+em {
+    color: #a074c4;
+}
+strong {
+    color: #9fca56;
+}
+u {
+    color: #eeeeee;
+}
+s {
+    color: #666666;
+    text-decoration: none;
+}
+.lineOfCode {
+    animation: typingEffect 1800ms steps(14, end) forwards 1000ms,
+    caretAnim 500ms steps(2, end) 0s infinite;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: auto;
+    border-right: 2px solid #ffffff;
+}
+.lineOfCode:nth-of-type(2) {
+    height: 0;
+    animation-delay: 3100ms;
+}
+.lineOfCode:nth-of-type(3) {
+    height: 0;
+    animation-delay: 5200ms;
+}
+
+@keyframes typingEffect {
+    0% {
+        border-width: 2px;
+    }
+    5% {
+        width: 0;
+        height: auto;
+        border-width: 2px;
+    }
+    93% {
+        border-width: 2px;
+    }
+    100% {
+        width: 14ch;
+        height: auto;
+        border-width: 0;
+    }
+}
+@keyframes caretAnim {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffffff;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+
+.flex{
+    width: 100%S;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,46 @@
+/* src/components/Skills.css */
+.skills {
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skills-column {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgba(249, 249, 249, 0.53);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-column h2 {
+    margin-bottom: 10px;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-column li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    margin: 5px 0;
+    font-size: 50px;
+}
+
+/* Increase icon size */
+.skills-column li img {
+    margin-right: 10px; /* Space between the icon and text */
+    vertical-align: middle; /* Align icon vertically with text */
+    width: 40px; /* Increased icon width */
+    height: 40px; /* Increased icon height */
+    object-fit: contain; /* Ensures the image scales correctly */
+}

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
 import profileImg from './profile.jpg'; // Replace with your image
+import pfp from './Subject.png';
+import bg from './bg.jpeg';
 
 function Hero() {
     const canvasRef = useRef(null);
@@ -120,9 +122,20 @@ function Hero() {
     return (
         <section className="hero">
             <canvas ref={canvasRef} id="canvas"></canvas>
-            <img src={profileImg} alt="Profile" className="profile-image"/>
+
+                <div>
+                <div className="person">
+                    <div className="container">
+                     <div className="container-inner">
+                        <img className="circle"
+                             src={bg}/>
+                        <img className="img img1"
+                             src={pfp}/>
+                    </div>
+                 </div>
+                 </div>
             <h1 className="neon turquoise">Hi, I'm Shaurya</h1>
-            <h2 className="title">A FullStack Developer</h2>
+            </div>
 
         </section>
     );
