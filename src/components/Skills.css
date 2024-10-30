@@ -1,4 +1,5 @@
-/* src/components/Skills.css */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 .skills {
     padding: 20px;
     text-align: center;
@@ -13,34 +14,85 @@
 .skills-column {
     flex: 1;
     margin: 0 10px;
-    padding: 10px;
-    background-color: rgba(249, 249, 249, 0.53);
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skills-column h2 {
+    color: rgba(142, 45, 226, 0.78);
     margin-bottom: 10px;
 }
 
 .skills-column ul {
     list-style: none;
     padding: 0;
+
 }
 
 .skills-column li {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the items horizontally */
+    justify-content: center;
     margin: 5px 0;
     font-size: 50px;
+    position: relative;
+    animation: gradientAnimation 4s ease infinite;
+
 }
 
-/* Increase icon size */
-.skills-column li img {
-    margin-right: 10px; /* Space between the icon and text */
-    vertical-align: middle; /* Align icon vertically with text */
-    width: 40px; /* Increased icon width */
-    height: 40px; /* Increased icon height */
-    object-fit: contain; /* Ensures the image scales correctly */
+/* Applying gradient background to icons */
+.skills-column li .icon {
+    display: inline-block;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0, #00c6ff, #ff8c00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 4s ease infinite;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect to speed up animation and scale */
+.skills-column li .icon:hover {
+    animation-duration: 1s;
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.skills-box {
+    display: flex;
+    padding: 2rem;
+
+}
+.text-box {
+    margin: 5rem;              /* Apply margins for spacing */
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: #000000;
+    background:
+            radial-gradient(circle at 0.4em 50%, #000 0.125em, #0000 0.135em) 0 0 / 100% 3vmin repeat-y,
+            linear-gradient(90deg, #0000 2.35em, #fbb 0 2.4em, #0000 0),
+            repeating-linear-gradient(#0000 0 5%, #99f 0 5.1%) 100% 60% / calc(100% - 2.35em) 92% no-repeat,
+            rgba(238, 238, 238, 0.85);
+    border-radius: 1rem;
+    text-align: center;        /* Center text inside the box */
+}
+.skills-h {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    font-size: 5rem;
+    font-family: 'Indie Flower', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS';
 }

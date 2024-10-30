@@ -13,15 +13,10 @@ function About() {
                     Intelligence and Machine Learning as my Specialization. I'm also a
                     Machine Learning enthusiast and a Web Developer.
                 </p>
-                <a href="/resume.pdf" download className="c-btn"><span
+                <a href="https://drive.google.com/file/d/10n3TxAby5gitaeLy6XhYug7XllCtvBsm/view?usp=sharing" download className="c-btn"><span
                     className="c-btn__label">View My Resume</span></a>
             </div>
 
-            <div className="box">
-                    <pre><code id="codeBlock"><div className="lineOfCode"><em>Learn </em>Innovate</div><div
-                        className="lineOfCode"><strong>Grow </strong> <b>Build</b>  <u></u></div><div
-                        className="lineOfCode"><s>#Hacker</s></div></code></pre>
-            </div>
         </section>
     );
 }

@@ -11,7 +11,7 @@ body {
   z-index: -2;
   height: 100vh; /* Full screen height */
   background-color: #000000; /* Black background */
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, rgba(0, 9, 29, 1) 1px); /* Radial gradient */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, rgb(7, 4, 17) 1px); /* Radial gradient */
   background-size: 20px 20px; /* Size of the gradient pattern */
 }
 
