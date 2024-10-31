@@ -4,7 +4,7 @@ A personal portfolio website built with React, showcasing skills, projects, and 
 
 ## Preview
 
-![Portfolio Preview](https://portfolio-five-beta-92.vercel.app) <!-- Add a screenshot of your portfolio -->
+[Live Demo](https://portfolio-five-beta-92.vercel.app/)
 
 ## Features
 
