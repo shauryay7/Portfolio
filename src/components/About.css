@@ -1,5 +1,3 @@
-
-
 .about {
     padding: 40px;
     text-align: center;
@@ -120,4 +118,118 @@ body {
 .box{
     display: flex;
     align-items: center;
+}
+
+/* Responsive Media Queries */
+
+/* Large tablets and small laptops (1024px and down) */
+@media screen and (max-width: 1024px) {
+    .sec {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    
+    h3 {
+        font-size: 2.2em;
+    }
+    
+    .quote {
+        font-size: 1.3em;
+    }
+}
+
+/* Tablets (768px and down) */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 30px 20px;
+    }
+    
+    .sec {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    h3 {
+        font-size: 2em;
+    }
+    
+    .quote {
+        font-size: 1.2em;
+    }
+    
+    .c-btn {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .c-btn__label {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile devices (480px and down) */
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 20px 15px;
+    }
+    
+    .sec {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h3 {
+        font-size: 1.8em;
+    }
+    
+    .quote {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+    
+    .c-btn {
+        padding: 0.7rem 1.2rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .c-btn__label {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+    
+    .connect-button {
+        padding: 8px 16px;
+        margin: 0.5rem;
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Very small mobile devices (360px and down) */
+@media screen and (max-width: 360px) {
+    .about {
+        padding: 15px 10px;
+    }
+    
+    .sec {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    h3 {
+        font-size: 1.6em;
+    }
+    
+    .quote {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    .c-btn {
+        padding: 0.6rem 1rem;
+    }
+    
+    .c-btn__label {
+        font-size: 0.9rem;
+    }
 }

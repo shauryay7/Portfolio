@@ -1,14 +1,13 @@
 import React from 'react';
 import './Skills.css';
-import { FaGolang } from "react-icons/fa6";
-import { FaCogs } from 'react-icons/fa';
-import { FaPython, FaJava, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiReact, SiNextdotjs, SiNodedotjs, SiMysql, SiPandas, SiTensorflow, SiAdobe, SiGooglecloud } from 'react-icons/si';
+// Updated and added necessary icons
+import { FaJava, FaPython, FaJsSquare, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap } from 'react-icons/fa';
+import { SiSpringboot, SiExpress, SiMysql, SiMongodb, SiHibernate, SiApachemaven } from 'react-icons/si';
 
 const Skills = () => {
     return (
         <div>
-            <h1 className="skills-h">Skills</h1>
+            <h1 className="skills-h">Technical Skills</h1>
             <div className="skills-box">
                 <div className="skills">
                     <div className="skills-container">
@@ -16,40 +15,36 @@ const Skills = () => {
                         <div className="skills-column">
                             <h2>Languages</h2>
                             <ul>
-                                <li className="icon"><FaCogs /></li>
-                                <li className="icon"><FaPython /></li>
                                 <li className="icon"><FaJava /></li>
+                                <li className="icon"><FaPython /></li>
                                 <li className="icon"><FaJsSquare /></li>
                                 <li className="icon"><FaHtml5 /></li>
                                 <li className="icon"><FaCss3Alt /></li>
-                                <li className="icon"><FaGitAlt /></li>
-                                <li className="icon"><FaGolang /></li>
                             </ul>
                         </div>
 
-                        {/* Technologies Column */}
+                        {/* Frontend & Backend Column */}
                         <div className="skills-column">
-                            <h2>Technologies</h2>
+                            <h2>Frontend & Backend</h2>
                             <ul>
-                                <li className="icon"><SiTailwindcss /></li>
-                                <li className="icon"><SiReact /></li>
-                                <li className="icon"><SiNextdotjs /></li>
-                                <li className="icon"><SiNodedotjs /></li>
+                                <li className="icon"><FaReact /></li>
+                                <li className="icon"><SiSpringboot /></li>
+                                <li className="icon"><FaNodeJs /></li>
+                                <li className="icon"><SiExpress /></li>
+                                <li className="icon"><FaBootstrap /></li>
+                            </ul>
+                        </div>
+
+                        {/* Databases & Tools Column */}
+                        <div className="skills-column">
+                            <h2>Databases & Tools</h2>
+                            <ul>
                                 <li className="icon"><SiMysql /></li>
-                                <li className="icon"><SiPandas /></li>
-                                <li className="icon"><SiTensorflow /></li>
-                                <li className="icon"><SiAdobe /></li>
-                            </ul>
-                        </div>
-
-                        {/* Tools Column */}
-                        <div className="skills-column">
-                            <h2>Tools</h2>
-                            <ul>
-                                <li className="icon"><SiGooglecloud /></li>
-                                <li className="icon"><SiAdobe /></li>
+                                <li className="icon"><SiMongodb /></li>
+                                <li className="icon"><SiHibernate /></li>
                                 <li className="icon"><FaGitAlt /></li>
-                                <li className="icon"><FaCogs /></li>
+                                <li className="icon"><FaGithub /></li>
+                                <li className="icon"><SiApachemaven /></li>
                             </ul>
                         </div>
                     </div>
@@ -57,12 +52,7 @@ const Skills = () => {
 
                 <div className="text-box">
                     <p>
-                        I’m a Developer with a strong foundation in JavaScript, Python, Java, HTML, CSS, and Go.
-                        I have expertise in technologies like React.js, Next.js, Node.js, TailwindCSS, MySQL, and TensorFlow,
-                        and I’m proficient in tools such as Git, Google Cloud, Adobe Suite, Figma, and Jira. I’m highly
-                        motivated, detail-oriented, and continuously strive to enhance my skills. I’m also experienced in working with
-                        responsive design, handling client feedback, and using modern frameworks and libraries to deliver effective and visually
-                        appealing user experiences.
+                    I am a versatile software developer skilled in Java, Python, and JavaScript, with a focus on creating high-performance applications. My backend expertise includes leveraging frameworks like Spring Boot, Node.js, and Express.js to build powerful APIs, while I use React.js, HTML, CSS, and Bootstrap  to create engaging, responsive frontends. I manage data efficiently with MySQL, MongoDB, and Hibernate and maintain code quality and collaboration through tools like Git, GitHub, and Maven
                     </p>
                 </div>
             </div>

@@ -1,42 +1,42 @@
 // src/components/Projects.js
 import React from 'react';
 import './Projects.css';
-import p1 from './p1.jpeg';
-import p2 from './p2.png';
-import p3 from './p3.png';
-import p4 from './p4.png';
+// It's recommended to find and import specific images for each project
+import p1 from './p1.jpeg'; // Placeholder for E-Commerce App
+import p2 from './p2.png'; // Placeholder for Blog API
+import p3 from './p3.png'; // Placeholder for Weather App
+import p4 from './p4.png'; // Placeholder for URL Shortener
+import p5 from './p5.png'; // Add a new placeholder image for Crypto Tracker
 
 function Projects() {
     return (
         <div className="projects">
-            <h1>Projects</h1>
+            <h1>Key Projects</h1>
             <div className="projects-container">
                 <div className="project-card">
-                    <img src={p1} alt="Weather Dashboard" className="project-image"/>
-                    <h2>Weather Dashboard 🌙</h2>
-                    <p>The Weather Dashboard is a user-friendly application that allows you to search for any city's current
-                        weather and five-day forecast. It provides real-time weather updates, temperature conversions between Celsius
-                        and Fahrenheit, and a visual representation of the temperature trends.</p>
+                    <img src={p1} alt="E-Commerce Web App" className="project-image"/>
+                    <h2>E-Commerce Web App 🛍️</h2>
+                    <p>A full-featured MERN stack e-commerce platform with product listings, cart functionality, user authentication, and order processing. Built with MongoDB, Express.js, React, and Node.js.</p>
                 </div>
                 <div className="project-card">
-                    <img src={p2} alt="YouTube Transcript Generator" className="project-image"/>
-                    <h2>YouTube Transcript Generator 🎥</h2>
-                    <p>This project extracts and processes YouTube video transcripts, including support for chapter
-                        parsing, punctuation restoration, and customizable output formats. It utilizes the YouTube Data API and
-                        YouTube Transcript API to fetch video metadata and transcripts.</p>
+                    <img src={p2} alt="Backend Blog Application API" className="project-image"/>
+                    <h2>Backend Blog Application API 📝</h2>
+                    <p>A complete RESTful API for a blog platform using Java and Spring Boot. Implements user authentication, post and comment management, and categories. Uses Hibernate and MySQL.</p>
+                </div>
+                 <div className="project-card">
+                    <img src={p4} alt="URL Shortener Service" className="project-image"/>
+                    <h2>URL Shortener Service 🔗</h2>
+                    <p>A scalable web service to convert long URLs into shortened links. Focused on an efficient backend architecture using Java, Spring Boot, and REST APIs.</p>
                 </div>
                 <div className="project-card">
-                    <img src={p3} alt="React Calculator Project " className="project-image"/>
-                    <h2>React Calculator Project ➗</h2>
-                    <p>This is a simple calculator built using React, HTML, CSS, and JavaScript. The calculator can
-                        perform basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+                    <img src={p5} alt="Crypto Tracker" className="project-image"/>
+                    <h2>Crypto Tracker 🪙</h2>
+                    <p>A cryptocurrency tracking application built with React. It fetches real-time data from the CoinGecko API to display current prices, market caps, and price changes for various cryptocurrencies.</p>
                 </div>
                 <div className="project-card">
-                    <img src={p4} alt="Music Player" className="project-image"/>
-                    <h2>Music Player 🎵 </h2>
-                    <p>A simple, aesthetically pleasing web-based music player built with HTML, CSS, and
-                        JavaScript. This player allows you to play, pause, and skip tracks, and displays album art,
-                        song title, and artist information.</p>
+                    <img src={p3} alt="Weather App" className="project-image"/>
+                    <h2>Weather App ☀️</h2>
+                    <p>A dynamic React application that displays real-time weather data from a third-party API. Features a clean, user-friendly interface to search for cities and view forecasts.</p>
                 </div>
             </div>
 

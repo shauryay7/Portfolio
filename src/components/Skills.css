@@ -1,71 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .skills {
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
+    background: transparent;
 }
 
 .skills-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills-column {
-    flex: 1;
-    margin: 0 10px;
-    padding: 0px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(142, 45, 226, 0.1);
+}
+
+.skills-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 6px 20px rgba(142, 45, 226, 0.2);
 }
 
 .skills-column h2 {
-    color: rgba(142, 45, 226, 0.78);
-    margin-bottom: 10px;
+    color: rgba(142, 45, 226, 0.9);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.skills-column h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    border-radius: 2px;
 }
 
 .skills-column ul {
     list-style: none;
     padding: 0;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .skills-column li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px 0;
-    font-size: 50px;
-    position: relative;
-    animation: gradientAnimation 4s ease infinite;
-
+    font-size: 3rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Applying gradient background to icons */
-.skills-column li .icon {
+.skills-column li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Icon styling with animated gradient */
+.skills-column li .icon,
+.skills-column li svg {
     display: inline-block;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0, #00c6ff, #ff8c00);
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0, #00c6ff, #ff8c00, #ff006e);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 4s ease infinite;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    background-clip: text;
+    animation: gradientFlow 6s ease infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* Hover effect to speed up animation and scale */
-.skills-column li .icon:hover {
-    animation-duration: 1s;
-    transform: scale(1.1);
-    filter: brightness(1.3);
+.skills-column li:hover .icon,
+.skills-column li:hover svg {
+    animation-duration: 1.5s;
+    filter: drop-shadow(0 4px 8px rgba(142, 45, 226, 0.3));
 }
 
-/* Keyframes for gradient animation */
-@keyframes gradientAnimation {
+/* Enhanced gradient animation */
+@keyframes gradientFlow {
     0% {
         background-position: 0% 50%;
     }
+    25% {
+        background-position: 100% 0%;
+    }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
     }
     100% {
         background-position: 0% 50%;
@@ -74,25 +124,102 @@
 
 .skills-box {
     display: flex;
+    flex-direction: column;
+    gap: 3rem;
     padding: 2rem;
+    background: transparent;
+}
 
-}
 .text-box {
-    margin: 5rem;              /* Apply margins for spacing */
-    padding: 2rem;
-    font-size: 1.8rem;
-    color: #000000;
-    background:
-            radial-gradient(circle at 0.4em 50%, #000 0.125em, #0000 0.135em) 0 0 / 100% 3vmin repeat-y,
-            linear-gradient(90deg, #0000 2.35em, #fbb 0 2.4em, #0000 0),
-            repeating-linear-gradient(#0000 0 5%, #99f 0 5.1%) 100% 60% / calc(100% - 2.35em) 92% no-repeat,
-            rgba(238, 238, 238, 0.85);
-    border-radius: 1rem;
-    text-align: center;        /* Center text inside the box */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    text-align: justify;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
 }
+
+.text-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(142, 45, 226, 0.5), transparent);
+}
+
 .skills-h {
-    margin-top: -1rem;
-    margin-bottom: -1rem;
-    font-size: 5rem;
+    margin: 2rem 0;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-family: 'Indie Flower', 'Patrick Hand SC', 'Comic Neue', 'Comic Sans', 'Comic Sans MS';
+    background: linear-gradient(135deg, #8e2de2, #4a00e0, #00c6ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleGradient 4s ease infinite;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes titleGradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-column {
+        padding: 1.5rem 1rem;
+    }
+    
+    .skills-column li {
+        font-size: 2.5rem;
+    }
+    
+    .text-box {
+        margin: 1rem;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    
+    .skills-box {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-column ul {
+        gap: 0.5rem;
+    }
+    
+    .skills-column li {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    
+    .text-box {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
 }

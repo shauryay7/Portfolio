@@ -1,33 +1,311 @@
-/* src/components/Header.css *//* src/components/Header.css */
+/* Header Component - Professional Design */
 
-.header {
+:root {
+    /* Consistent with Hero section variables */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent-color: #4f46e5;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --bg-dark: #0f0f23;
+    --bg-darker: #080817;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-radius: 12px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
-    background-color: #000; /* Adjust as per your theme */
-    color: #fff;
-}
-
-.logo {
-    font-size: 2em;
-    font-weight: bold;
-    color: #8e2de2;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.icon {
-    font-size: 1.5em;
-    color: #ffffff;
-    transition: color 0.3s;
+    padding: 1rem 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+    min-height: 70px;
+  }
+  
+  /* Glass morphism effect enhancement */
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    z-index: -1;
+    border-radius: 0;
+  }
+  
+  /* Scrolled state enhancement */
+  .header.scrolled {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(25px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
     cursor: pointer;
-}
-
-.icon:hover {
-    color: #8e2de2; /* Changes color on hover */
-}
-
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  /* Logo hover effect */
+  .logo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    border-radius: 1px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .logo:hover::after {
+    width: 100%;
+  }
+  
+  .logo:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+  }
+  
+  /* Social Icons Container */
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+  }
+  
+  .social-icons:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Individual Icon Styling */
+  .icon {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Icon hover effects with different colors for each platform */
+  .icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: 
+      var(--shadow-soft),
+      0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  /* Platform-specific hover colors */
+  .social-icons .icon:nth-child(1):hover {
+    /* Facebook */
+    color: #1877f2;
+    box-shadow: 
+      var(--shadow-soft),
+      0 0 20px rgba(24, 119, 242, 0.4);
+  }
+  
+  .social-icons .icon:nth-child(2):hover {
+    /* Twitter */
+    color: #1da1f2;
+    box-shadow: 
+      var(--shadow-soft),
+      0 0 20px rgba(29, 161, 242, 0.4);
+  }
+  
+  .social-icons .icon:nth-child(3):hover {
+    /* LinkedIn */
+    color: #0077b5;
+    box-shadow: 
+      var(--shadow-soft),
+      0 0 20px rgba(0, 119, 181, 0.4);
+  }
+  
+  .social-icons .icon:nth-child(4):hover {
+    /* Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    box-shadow: 
+      var(--shadow-soft),
+      0 0 20px rgba(225, 48, 108, 0.4);
+  }
+  
+  /* Icon active state */
+  .icon:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+  
+  /* Focus states for accessibility */
+  .logo:focus-visible,
+  .icon:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .header {
+      padding: 0.75rem 1rem;
+      min-height: 60px;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+    }
+    
+    .social-icons {
+      gap: 0.5rem;
+      padding: 0.25rem;
+    }
+    
+    .icon {
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      min-width: 40px;
+      min-height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+      font-size: 1.25rem;
+    }
+    
+    .social-icons {
+      gap: 0.25rem;
+    }
+    
+    .icon {
+      font-size: 1rem;
+      padding: 0.4rem;
+      min-width: 36px;
+      min-height: 36px;
+    }
+  }
+  
+  /* Animation for header entrance */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .header {
+    animation: slideDown 0.6s ease-out;
+  }
+  
+  /* Micro-interactions */
+  .logo,
+  .icon {
+    will-change: transform;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .header {
+      background: rgba(0, 0, 0, 0.95);
+      border-bottom: 2px solid #ffffff;
+    }
+    
+    .logo {
+      -webkit-text-fill-color: #ffffff;
+      background: none;
+    }
+    
+    .icon {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .header,
+    .logo,
+    .icon,
+    .social-icons {
+      animation: none;
+      transition: none;
+    }
+    
+    .logo:hover,
+    .icon:hover {
+      transform: none;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .header {
+      position: static;
+      background: transparent;
+      color: #000000;
+      border-bottom: 1px solid #000000;
+    }
+    
+    .social-icons {
+      display: none;
+    }
+  }

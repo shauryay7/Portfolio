@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
-import profileImg from './profile.jpg'; // Replace with your image
+import profileImg from './profile.jpg'; 
 import pfp from './Subject.png';
 import bg from './bg.jpeg';
 
